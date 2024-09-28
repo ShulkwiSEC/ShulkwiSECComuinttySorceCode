@@ -30,7 +30,7 @@ def handle_client(client_socket, client_address):
         for client in clients:
             if client != client_socket:
                 client.send(message.encode('UTF-8'))
-    
+
     clients.remove(client_socket)
     client_socket.close()
     print(f"[DISCONNECTED] {client_address} disconnected.")
