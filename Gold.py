@@ -40,7 +40,7 @@ class Gold:
                 return str(time.time()) 
             else:
                 return ''
-
+        
         elif gold == 'askai':
             ai = AI(statement)
             response = f'ai: {ai.result}'

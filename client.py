@@ -181,6 +181,8 @@ def main(stdscr):
         message = input_win.getstr(1, 10).decode('UTF-8')
         curses.noecho()
         if message.strip() != "":
+            if message == 'exit()' or message == 'quite()':
+                exit(0)
             client_socket.send(message.encode('UTF-8'))
             
             # Display my message in green
